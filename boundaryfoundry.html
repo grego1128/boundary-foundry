@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Boundary Foundry</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAzYJL2Db0Bz39ODAA_Bl0JhQVNbCyanho4nOPOgTGJ-98whetaBSRl6KZuPSPd6QT18Xhyrl0F8S5pg"
+      type="text/javascript"></script>
+    <!-- 127.0.0.1:8000:  ABQIAAAAzYJL2Db0Bz39ODAA_Bl0JhTpH3CbXHjuCVmaTc5MkkU4wO1RRhQzjTp4elUUxMNcUtMaHSsc4ouxxw -->
+    <!-- olivia-oneill.com: ABQIAAAAzYJL2Db0Bz39ODAA_Bl0JhSdXp0xWmeUdSGgokxpJqjxSzBk_RSxjqldrQZUhfphIEifClMbI3aavw -->
+    <!-- <p>Click <b><a id="trimBorders" onclick="boundaryApp.trimBorders();">here</a></b> to trim borders</p> -->
+    <script src="prototype.js" type="text/javascript"></script>
+    <script src="scriptaculous.js?load=effects,dragdrop" type="text/javascript"></script>
+    <script src="utilities.js" type="text/javascript"></script>
+    <script src="osmcore.js" type="text/javascript"></script>
+    <script src="osmapp.js" type="text/javascript"></script>
+    <script src="boundaryfoundry.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="boundaryfoundry.css" />
+    <link href="/boundaryfoundry/boundaryfoundry.ico" rel="icon" type="image/x-icon"/>
+  </head>
+  <body>
+    <h1>Boundary Foundry</h1>
+    <form id="frmAddr" action="#">
+      <p>
+        <p>Click 
+          <span id="addrClick" class="jsAction" >here</span>
+           to Find Address: 
+           <input type="text" size="60" id="addr" name="addr" value="1 W King Rd, Malvern, PA" />
+           </p>
+      </p>
+    </form>
+    <div id="titlesDiv">
+  		<div id="availableTitleDiv">
+        <h3>Available</h3>
+      </div>
+  		<div id="acceptedTitleDiv">
+        <h3>Accepted</h3>
+      </div>
+  		<div id="rejectedTitleDiv">
+        <h3>Rejected</h3>
+    	</div>
+    </div>
+    <div id="waysDiv">
+  		<div id="availableDiv" title="Drag from here to Accepted to build boundary">
+        <ul id="availableList"></ul>
+      </div>
+  		<div id="acceptedDiv">
+        <ul id="acceptedList"></ul>
+      </div>
+  		<div id="rejectedDiv">
+        <ul id="rejectedList"></ul>
+    	</div>
+    </div>
+    <a id="osmBrowseWay" target="_blank" 
+        href="http://www.openstreetmap.org">OpenStreetMap</a>
+    <p>Click on map to find nearby OSM Ways (within ~400 feet)</p>
+    <div id="map"></div>
+    <p>Click <span id="trimClick" class="jsAction" >here</span> to trim borders</p>
+    <p>Click <span id="uploadClick" class="jsAction" >here</span>  to upload the boundary (not yet ready!)</p>
+    <p>Click <span id="startOverClick" class="jsAction" >here</span>  to start over</p>
+  </body>
+</html>
